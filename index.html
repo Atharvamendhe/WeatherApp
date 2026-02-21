@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Weather</h1>
+
+      <form id="searchForm" class="search">
+        <input
+          id="cityInput"
+          type="text"
+          placeholder="Search city (e.g., Mumbai)"
+          autocomplete="off"
+        />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+
+    <section class="card" aria-live="polite">
+      <div class="row">
+        <div>
+          <p class="muted">Location</p>
+          <h2 id="place">—</h2>
+          <p class="muted" id="time">—</p>
+        </div>
+
+        <div class="iconWrap">
+          <img id="icon" alt="" />
+        </div>
+      </div>
+
+      <div class="tempRow">
+        <div class="temp">
+          <span id="temp">—</span><span class="unit">°C</span>
+        </div>
+
+        <div class="desc">
+          <p id="desc">—</p>
+          <p class="muted">Feels like <span id="feels">—</span>°C</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="stat">
+          <p class="muted">Humidity</p>
+          <p><span id="humidity">—</span>%</p>
+        </div>
+
+        <div class="stat">
+          <p class="muted">Wind</p>
+          <p><span id="wind">—</span> m/s</p>
+        </div>
+
+        <div class="stat">
+          <p class="muted">Pressure</p>
+          <p><span id="pressure">—</span> hPa</p>
+        </div>
+
+        <div class="stat">
+          <p class="muted">Visibility</p>
+          <p><span id="visibility">—</span> km</p>
+        </div>
+      </div>
+
+      <p class="error" id="error"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
